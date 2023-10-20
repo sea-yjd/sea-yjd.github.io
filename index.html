@@ -1,8 +1,27 @@
-<p>Hello 大家好</p>
-<p>我是霸都丶傲天，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>语音示例</title>
+</head>
+<body>
+    <h1>这是一个语音示例</h1>
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">知乎</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了,现在在知乎写文章)</a> </li>
-</ul>
+    <p>点击按钮以触发语音：</p>
+    <button onclick="speakText()">播放语音</button>
+
+    <script>
+        // 创建一个新的语音对象
+        var speechSynthesis = window.speechSynthesis;
+        var speech = new SpeechSynthesisUtterance();
+
+        // 设置要朗读的文本
+        speech.text = "你好，这是一个语音示例";
+
+        // 播放语音的函数
+        function speakText() {
+            speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
