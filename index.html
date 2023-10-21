@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>多彩的示例</title>
+    <title>示例网页</title>
     <style>
         body {
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            color: #333;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff5733;
+            text-align: center;
+            padding: 20px 0;
         }
 
         h1 {
-            color: #ff5733;
-        }
-
-        p {
-            color: #3d3dff;
+            font-size: 36px;
+            margin: 0;
         }
 
         .container {
-            background-color: #e8e8e8;
-            border: 2px solid #ccc;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        p {
+            font-size: 18px;
+            line-height: 1.5;
         }
 
-        audio {
+        .video {
             width: 100%;
+            height: 400px;
+        }
+
+        .button {
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>多彩的示例</h1>
-        <p>这是一个包含题目、摘要、多样化的图片和音频的示例。</p>
-    </div>
-    
-    <div class="container">
-        <h2>多样化的图片</h2>
-        <img src="your-image1.jpg" alt="多彩的图片1">
-        <img src="your-image2.jpg" alt="多彩的图片2">
-    </div>
+    <header>
+        <h1>这是一个示例网页</h1>
+    </header>
 
     <div class="container">
-        <h2>音频示例</h2>
-        <audio controls>
-            <source src="your-audio.mp3" type="audio/mpeg">
-            您的浏览器不支持音频播放。
-        </audio>
+        <p>这是一个模仿 https://zhangyongmao.github.io/VISinger2/ 的示例网页。你可以在这里添加你的内容和样式。</p>
+        <div class="video">
+            <!-- 在这里插入视频或嵌入其他内容 -->
+        </div>
+        <a class="button" href="#">了解更多</a>
     </div>
 </body>
 </html>
