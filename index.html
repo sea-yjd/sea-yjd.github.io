@@ -23,11 +23,11 @@
             max-width: 80%; /* 限制图像宽度不超过容器宽度 */
         }
         audio {
-            width: 10%; /* 使音频播放器宽度占满容器 */
+            width: 20%; /* 使音频播放器宽度占满容器 */
         }
 
         .abstract {
-            max-width: 70%; /* 限制摘要文本的宽度 */
+            max-width: 80%; /* 限制摘要文本的宽度 */
             margin: 0 auto; /* 水平居中 */
             font-size: 18px; /* 控制文本的字体大小 */
         }
@@ -41,15 +41,6 @@ To address these issues, in this paper, we propose a general framework, named sp
 Unlike existing approaches that operate voices in the time domain, the proposed framework operates voices in the time-frequency domain, which improves the interpretability, transferability, and imperceptibility of the attack. Moreover, it can be implemented with any gradient-based attackers. To utilize the advantage of model ensembling, we not only implement STA-MDCT with a single white-box surrogate model, but also with an ensemble of surrogate models. Finally, we visualize the saliency maps of adversarial voices by the class activation maps (CAM), which offers an interpretable basis to transfer-based attacks in speaker recognition for the first time. Extensive comparison results with six representative attackers show that the CAM visualization clearly explains the effectiveness of STA-MDCT, and the weaknesses of the comparison methods; 
 the proposed method outperforms the comparison methods by a large margin.</p>
     
-    <!-- 图片 -->
-    <img src="framework.jpg" alt="图片描述">
-    
-    <p style="font-size: 25px;">2. Demo</p>
-    <!-- 音频 -->
-    <audio controls>
-        <source src="Clean-700-122866-0000.wav" type="audio/mpeg">
-        您的浏览器不支持音频标签。
-    </audio>
 
     <div class="container">
         <!-- 图像 -->
@@ -60,8 +51,49 @@ the proposed method outperforms the comparison methods by a large margin.</p>
                 <source src="Clean-700-122866-0000.wav" type="audio/mpeg">
                 您的浏览器不支持音频标签。
             </audio>
-            <span class="explanation">这是音频文件的解释或描述。你可以在这里添加任何文本内容，用于解释音频的相关信息。</span>
+            <span class="explanation">Clean audio</span>
         </div>
+
+        <div class="audio-container">
+            <audio controls>
+                <source src="I-FGSM-700-122866-0000.wav" type="audio/mpeg">
+                您的浏览器不支持音频标签。
+            </audio>
+            <span class="explanation">Adversarial audio made by I-FGSM</span>
+        </div>
+
+        <div class="audio-container">
+            <audio controls>
+                <source src="MI-FGSM-700-122866-0000.wav" type="audio/mpeg">
+                您的浏览器不支持音频标签。
+            </audio>
+            <span class="explanation">Adversarial audio made by MI-FGSM</span>
+        </div>
+
+        <div class="audio-container">
+            <audio controls>
+                <source src="NI-FGSM-700-122866-0000.wav" type="audio/mpeg">
+                您的浏览器不支持音频标签。
+            </audio>
+            <span class="explanation">Adversarial audio made by NI-FGSM</span>
+        </div>
+
+        <div class="audio-container">
+            <audio controls>
+                <source src="ACG-700-122866-0000.wav" type="audio/mpeg">
+                您的浏览器不支持音频标签。
+            </audio>
+            <span class="explanation">Adversarial audio made by ACG</span>
+        </div>
+
+        <div class="audio-container">
+            <audio controls>
+                <source src="STA-MDCT-FGSM-700-122866-0000.wav" type="audio/mpeg">
+                您的浏览器不支持音频标签。
+            </audio>
+            <span class="explanation">Adversarial audio made by our STA-MDCT</span>
+        </div>
+        
     </div>
 </body>
 </html>
